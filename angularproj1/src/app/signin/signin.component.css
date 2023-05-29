@@ -1,0 +1,9 @@
+.login-form-container{
+    border: 1px solid navy;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 2px 2px;
+    background-color: antiquewhite;
+}

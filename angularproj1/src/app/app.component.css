@@ -1,0 +1,23 @@
+.heading-main {
+    color: blueviolet;
+    font-size: 30px;
+    text-shadow: 4px 4px 4px red;
+}
+
+.div-container {
+    border: 1px solid orchid;
+    width: 200px;
+    padding: 10px;
+    background-color: aquamarine;
+    margin: auto;
+}
+
+.h1-container {
+    color: yellow;
+    font-size: 30px;
+}
+
+.fname {
+    color: brown;
+    font-size: 30px;
+}
