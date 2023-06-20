@@ -1,0 +1,33 @@
+.div-container{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+}
+.itm-container{
+    color: tomato;
+    font-size: 20px;
+    font-family: 'Courier New';
+}
+.table-container{
+    height: 300px;
+    width: 250px;
+    background-color: aquamarine;
+}
+table,th,tr,td{
+    border: 1px solid orangered;
+    border-collapse: collapse;
+    padding: 10px 10px;
+}
+.container{
+    color: yellow;
+    font-size: 30px;
+}
+.container1{
+    color: rgb(253, 58, 214);
+    font-size: 30px;
+}
+.container3{
+    color:tomato;
+    font-size: 30px;
+}

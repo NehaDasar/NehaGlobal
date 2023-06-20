@@ -1,0 +1,60 @@
+.container{
+    background-color: yellowgreen;
+    height: 1000px;
+    width: 100%;
+}
+.heading{
+    text-align: center;
+}
+.form-container{
+    text-align: center;
+    margin: auto;
+    border: 1px solid black;
+    height: 400px;
+    width: 300px;
+    padding: 6px 6px;
+    background-color: antiquewhite;
+}
+.label{
+    font-size: 20px;
+    padding: 5px; 
+    top: 4px;
+    position: relative;
+}
+.inp-box{
+    padding: 5px;
+    margin-top: 10px;
+    width: 200px;
+}
+.pass{
+    font-size: 20px;
+    padding: 5px; 
+    position: relative;
+    top: 15px;
+}
+.inp-pass{
+    width: 200px;
+    padding: 5px;
+    margin-top: 21px;
+}
+.submit-btn{
+    background-color: coral;
+    border: none;
+    font-size: 20px;
+    padding: 3px 3px;
+    position: relative;
+    top: 51px;
+}
+
+.back-btn{
+    position: relative;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: darkorange;
+}
+.span-err{
+    color:  red;
+    font-size: 16px;
+}

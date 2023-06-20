@@ -1,0 +1,27 @@
+
+<button (click)="showForm()">Show Sign In Form</button><br><br>
+
+<form [formGroup]="sigInForm" *ngIf="showSignInForm">
+
+    Password : <input [type]="showPassword ? 'text' : 'password' " formControlName="password" (keyup)="password()">
+     
+    <button (click)="showPass()">show</button><br>
+
+    <span *ngIf="!isMatch && sigInForm.get('password')?.dirty" class="err">
+        password and confirm password sould be same
+    </span><br>
+
+    Confirm Password : <input type="text" formControlName="confirmPassword" (keyup)="confirmPassword()"><br>
+    <span *ngIf="!isMatch && sigInForm.get('confirmPassword')?.dirty" class="err">
+        password and confirm password sould be same
+    </span><br>
+
+   <label>name</label>
+   <input type="text" formControlName="name"><br>
+<!-- Copy,cOpy,COpy, -->
+   <span *ngIf="sigInForm.get('name')?.errors?.['Err']" class="err">
+    name should not contain copy word 
+   </span>
+   <span  class="err" *ngIf="sigInForm.get('name')?.errors?.['whiteSpace']">
+    name should not contain white spaces </span>
+</form>

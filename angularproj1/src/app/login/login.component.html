@@ -1,0 +1,41 @@
+<div class="container">
+
+    <button (click)="back()" class="back-btn">Back</button>
+
+    <h2 class="heading">Login Form</h2>
+
+    <form #loginForm='ngForm' class="form-container">
+    
+        <label class="label"> Full Name </label><br>
+        <input type="text" ngModel class="inp-box" name="fName" 
+           #fullName='ngModel' pattern="[a-zA-Z ]*$" required
+            minlength="5" maxlength="70"><br>
+    
+        <span class="span-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched ">
+            Please Enter Alphabets Only
+        </span>
+        <span *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern']" class="span-err">
+            FullName should be having altleast 5 Alphabets
+        </span><br><br>
+    
+    
+        <label class="pass"> Password </label><br>
+        <!-- PooNam$6767 -->
+        <input type="text" class="inp-pass" ngModel name="pass" #password="ngModel" minlength="8"
+            pattern="[A-Z]{2}[a-zA-Z0-9@#!$%&^*]{9}$"><br>
+    
+        <span *ngIf="password.errors?.['minlength']" class="span-err">
+            Password should contain atleast 8 charachters
+        </span>
+        <span *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] " class="span-err">
+            Please match the pattern
+        </span><br>
+
+        <label > Gender </label><br>
+       <input type="radio" required value="Male" name="gender"  ngModel #gender='ngModel'> Male <br>
+       <input type="radio" required value="Female"  name="gender" ngModel #gender='ngModel'>Female <br>
+       <input type="radio" required value="Other"  name="gender" ngModel #gender='ngModel'>  other <br>
+       <span class="span-err" *ngIf="gender.errors?.['required'] ">Gender is required </span>
+        <button class="submit-btn" [disabled]="!loginForm.valid" (click)="submit(loginForm.value)"> Submit </button>
+    </form>
+</div>
