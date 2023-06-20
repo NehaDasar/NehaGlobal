@@ -12,5 +12,41 @@
     </div><br>
     <button (click) = "submit()">SignUp</button>
 </div>
+</form>
+</div><br>
+<button (click) = "submit()">click</button>
+</div><br>    <br>
+<p>{{amount}}</p>
+<p>{{test}}</p>
+
+<h2>Welcome {{studentName}}</h2>
+<h2>{{studentMarks}}</h2>
+<h2>{{isStudentActive}}</h2>
+{{studentName}} -->
+
+<!--  can we use typeof operator in string interpollation ::we can no use -->
+ <h2>{{typeof(studentName)}}</h2>
+ <h2>{{interpolationTest()}}</h2>
+<h2>{{10*33}}</h2>
+<h2>{{let a = 30}}</h2> assigment operator is not possible
+ {{amount = 900}} assigning value with interpollation not possible
+
+{{amount == 50000}} 
+we can use equality operator with interpolation 
+{{myName}}
+<br>
+Name: <input type="text" [value] = "myName"><br>
+Gender: <input type="radio" [checked] = "gender"><br><br>
+<button (click)="testingEventBinding()">Button</button>
+<p>{{testingEventDB}}</p>
+<input type="text" [value]="testingEventDB"><br><br>
+
+<!-- Two way data binding -->
+<input type="text" [(ngModel)]="city"><br><br>
+{{city}}
+
+<input type="text" [(ngModel)]="myName">
+<br><br><br>
+
 
 

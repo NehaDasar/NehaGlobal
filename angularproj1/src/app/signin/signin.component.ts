@@ -13,6 +13,6 @@ submit() {
   let num = 20;
   num = 2000;
   //this.test = 'testing property';
-  this.formTitle = 'Sign U Form';
+  this.formTitle = 'Sign Up Form';
 }
 }
