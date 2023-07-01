@@ -1,12 +1,23 @@
 
-
 <div class="parent">
-    <h2 class="heading">My Application</h2>
-    <button (click)="login()" class="btn-login">Login</button>&nbsp;
-    <button (click) = "signUp()" class="btn-login">Sign Up</button>
-    
-    <button (click)="studentActivity()" class="btn-login"> Student Activity </button> 
-    <button routerLink="/student/studentDemo" class="btn-login"> Student Demo</button> 
+    <h2 class="heading" *ngIf="!userName">My Application</h2>
+    <h2 class="heading" *ngIf="userName">Welcome {{userName}},</h2>
+    <button (click)="login()" class="btn-login"> Login </button>&nbsp;
+    <button (click)="signUp()" class="btn-login"> Sign Up </button>
+    <button (click)="studentActivity()" class="btn-login"> Student Activity </button>
+    <button routerLink="/student/studentDemo" class="btn-login"> Student Demo</button>
     <button (click)="directives()" class="btn-login">Directives</button>
+    <button (click)="lifeCycleHooks()" class="btn-login">lifeCycleHooks</button>
+    <button (click)="parent()"  class="btn-login"> Parent </button>
+    <button (click)="child()"  class="btn-login">child</button>
+    <button (click)="apicall()"  class="btn-login">ApiCall</button>
+    <br>
+    <div>{{list}}</div>
+    <div *ngIf="studentsData">{{studentsData.name}}
+        
+    </div>
+    <div *ngIf="studentsData">{{studentsData.city}}</div>
+    <button (click)="show()">click</button>
 </div>
+
 

@@ -1,18 +1,20 @@
 
 <button (click)="showForm()">Show Sign In Form</button><br><br>
-
+<button (click)="getData()">GetData</button>
 <form [formGroup]="sigInForm" *ngIf="showSignInForm">
 
-    Password : <input [type]="showPassword ? 'text' : 'password' " formControlName="password" (keyup)="password()">
+    Password : <input [type]="showPassword ? 'text' : 'password' "
+     formControlName="password" (keyup)="password()">
      
     <button (click)="showPass()">show</button><br>
-
-    <span *ngIf="!isMatch && sigInForm.get('password')?.dirty" class="err">
+    <span *ngIf="strongPassword " >Strong password</span>
+    <span *ngIf="isMatch && sigInForm.get('password')?.dirty && !strongPassword" class="err">
         password and confirm password sould be same
     </span><br>
 
-    Confirm Password : <input type="text" formControlName="confirmPassword" (keyup)="confirmPassword()"><br>
-    <span *ngIf="!isMatch && sigInForm.get('confirmPassword')?.dirty" class="err">
+    Confirm Password : <input type="text" formControlName="confirmPassword"
+     (keyup)="confirmPassword()"><br>
+    <span *ngIf=" isMatch&& sigInForm.get('confirmPassword')?.dirty" class="err">
         password and confirm password sould be same
     </span><br>
 

@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LandingComponent } from './landing/landing.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
-import { FormsModule } from '@angular/forms';
+//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { SharedModule } from './shared/shared.module';
+
+//import { HttpClientModule } from '@angular/common/http';
 
 
 console.log('app.module.ts file');
@@ -20,17 +25,23 @@ console.log('app.module.ts file');
     SignUpComponent,
     LandingComponent,
     DirectivesInAngularComponent,
+    LifecyclehooksComponent,
+    ParentComponent,
+    ChildComponent,
     
   ],
   imports: [
-    FormsModule,
+    //FormsModule,
+    //ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    //HttpClientModule,
     
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

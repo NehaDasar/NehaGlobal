@@ -60,12 +60,10 @@
         <br><br>
         <button [disabled]="!signUpForm.valid"  (click)="submit()"> Submit </button>
     </form>
+   
+</div><br><br>
+
+<div class="stdname">
+   Enter student Name: <input type ="text" [(ngModel)]="studentName" (blur)="inputBox()">
 </div>
-
-
-<!--      *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">
-            Name is required
-        </span>
-        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">
-            Please Enter Valid Name
-        </span><br> -->
+<br><br><br><br>
