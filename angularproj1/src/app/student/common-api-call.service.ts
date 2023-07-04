@@ -25,4 +25,9 @@ export class CommonApiCallService {
     return this.httpClient.post(apiurl,data)
   
     }
+    getApiCall(enpoint:any){
+      let url = this.url + enpoint;
+      return this.httpClient.get(url);
+    }
+    
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core'; //import section
 import { Router } from '@angular/router';
 import { DatastoringserviceService } from '../datastoringservice.service';
 import { StudentDataService } from '../student/studentdata.service';
+import { CommonApiCallService } from '../student/common-api-call.service';
 
 @Component({ //component directive
   selector: 'app-landing',
@@ -43,10 +44,12 @@ export class LandingComponent {
     statusCode: 200,
     massage: "success"
   };
+  getApiResponse: any;
 
  constructor( private router : Router,
    private sDataService: DatastoringserviceService,
-   private studentDataService : StudentDataService
+   private studentDataService : StudentDataService,
+   public commonApiCallService : CommonApiCallService
   ){  //di-dependancy Injection
 
  }
@@ -102,5 +105,16 @@ child(){
 }
 apicall(){
   this.router.navigateByUrl('student/apicall')
+}
+
+getApiCall(){
+  console.log('get api calling');
+  let endpoint ='admin';
+  this.commonApiCallService.getApiCall({endpoint}).subscribe((response: any)=>{
+    this.getApiResponse = response;
+  })
+  
+  console.log("this.getApiResponse",this.getApiResponse);
+  
 }
 }
