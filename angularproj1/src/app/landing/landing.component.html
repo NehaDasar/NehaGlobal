@@ -1,0 +1,49 @@
+<!-- 
+<div class="parent">
+    <h2 class="heading" *ngIf="!userName">My Application</h2>
+    <h2 class="heading" *ngIf="userName">Welcome {{userName}},</h2>
+    <button (click)="login()" class="btn-login"> Login </button>&nbsp;
+    <button (click)="signUp()" class="btn-login"> Sign Up </button>&nbsp;
+    <button (click)="studentActivity()" class="btn-login"> Student Activity </button>&nbsp;
+    <button routerLink="/student/studentDemo" class="btn-login"> Student Demo</button>&nbsp;
+    <button (click)="directives()" class="btn-login">Directives</button>&nbsp;
+    <button (click)="lifeCycleHooks()" class="btn-login">lifeCycleHooks</button>&nbsp;
+    <button (click)="parent()"  class="btn-login"> Parent </button>&nbsp;
+    <button (click)="child()"  class="btn-login">child</button>&nbsp;
+    <button (click)="apicall()"  class="btn-login">ApiCall</button>&nbsp;
+    <button (click)="form()"  class="btn-login">Form</button>&nbsp;
+     <button click()="form()" class="btn-login">Form</button>
+    <button (click)="getApiCall()" class ="btn-login">Get ApiCall</button>
+   
+    <div>{{list}}</div>
+    <div *ngIf="studentsData"> {{studentsData.name}}
+    
+    </div>
+    <div *ngIf="studentsData">{{studentsData.city}}</div><br>
+    <button (click)="show()" class="btn-login">click</button>
+</div> -->
+
+
+
+<div class="parent">
+    <h2 class="heading" *ngIf="!userName">My Application</h2>
+    <h2 class="heading" *ngIf="userName">Welcome {{userName}},</h2>
+    <button (click)="login()" class="btn-login"> Login </button>&nbsp;
+    <button (click)="signUp()" class="btn-login"> Sign Up </button>
+    <button (click)="studentActivity()" class="btn-login"> Student Activity </button>
+    <button routerLink="/student/studentDemo" class="btn-login"> Student Demo</button>
+    <button (click)="directives()" class="btn-login">Directives</button>
+    <button (click)="lifeCycleHooks()" class="btn-login">lifeCycleHooks</button>
+    <button (click)="parent()"  class="btn-login"> Parent </button>
+    <button (click)="child()"  class="btn-login">child</button>
+    <button (click)="apicall()">API CAll</button>
+    <button (click)="getApiCall()">Get Api Call</button>
+    <button (click)="form()">Form</button>
+    <br>
+    <div>{{list}}</div>
+    <div *ngIf="studentsData">{{studentsData.name}}</div>
+    <div *ngIf="studentsData">{{studentsData.city}}</div>
+    <button (click)="show()">click</button>
+</div>
+
+

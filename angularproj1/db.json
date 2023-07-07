@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "fullName": "Nehadasarwar",
+      "mobNo": "7894563214",
+      "email": "vgd2xfgn@gff",
+      "userName": "NEHA",
+      "city": "Mumbai",
+      "address": "asdafdx",
+      "gender": "Female",
+      "id": 2
+    },
+    {
+      "fullName": "Nehadasarwar",
+      "mobNo": "7894563214",
+      "email": "vgd2xfgn@gff",
+      "userName": "NEHA",
+      "city": "Mumbai",
+      "address": "asdafdx",
+      "gender": "Female",
+      "id": 3
+    },
+    {
+      "fullName": "Nehadasarwar",
+      "mobNo": "7894563214",
+      "email": "vgd2xfgn@gff",
+      "userName": "NEHA",
+      "city": "Mumbai",
+      "address": "asdafdx",
+      "gender": "Female",
+      "id": 4
+    },
+    {
+      "fullName": "v hyubuynhv",
+      "mobNo": "7578757758",
+      "email": "nvb",
+      "userName": "gfb1",
+      "city": "lk",
+      "address": "fv",
+      "gender": "Female",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+ 
+  "studentname": [
+    {
+      "studentNtname": "Arihant",
+      "id": 1
+    },
+    {
+      "studentNtname": "ArihantFadewar",
+      "id": 2
+    },
+    {
+      "studentNtname": "Anand",
+      "id": 3
+    },
+    {
+      "studentNtname": "neha",
+      "id": 4
+    }
+  ]
+
+}

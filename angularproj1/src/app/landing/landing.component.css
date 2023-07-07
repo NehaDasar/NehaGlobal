@@ -1,0 +1,18 @@
+.parent{
+    background-color: antiquewhite;
+    height: 1000px;
+    width: 100%;
+}
+.heading{
+    text-align: center;
+}
+.btn-login{
+    padding: 2px 2px;
+    background-color: springgreen;
+    text-align: center;
+    color: rgb(10, 10, 10);
+    margin-left: 5px;
+    border: none;
+    font-size: 15px;
+    
+}

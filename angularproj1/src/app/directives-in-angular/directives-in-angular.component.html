@@ -1,0 +1,114 @@
+<p>directives-in-angular works!</p>
+<!-- directives can be classified in 3 categories based on how they behave:
+
+1.Component Directives
+2.Structural Directives
+3.Attribute Directives
+
+Component Directives: Component directives are used in main class.
+They contain the detail of how the component should be processed,
+instantiated and used at runtime.
+
+Structural Directives: Structural directives start with a * sign. 
+These directives are used to manipulate and change the structure 
+of the DOM elements(show or hide).
+For example, *ngIf directive, *ngSwitch directive, and *ngFor directive. -->
+<!-- uses:
+*ngIf Directive: The ngIf allows us to Add/Remove DOM Element.
+*ngSwitch Directive: The *ngSwitch allows us to Add/Remove DOM Element. It is similar to switch statement of C#.
+*ngFor Directive: The *ngFor directive is used to repeat a portion of HTML template once per each item from an iterable list (Collection). 
+
+Attribute Directives: Attribute directives are used to change the look and behavior of the DOM elements. For example: ngClass directive, and ngStyle directive etc.
+ngClass Directive: The ngClass directive is used to add or remove CSS classes to an HTML element.
+ngStyle Directive: The ngStyle directive facilitates you to modify the style of an HTML element using the expression. You can also use ngStyle directive to dynamically change the style of your HTML element-->
+
+<div>
+    <!-- In case of true value of propery compiler will ADD that element to the DOM -->
+    <h1 *ngIf="show1">hhhhhhhhhh</h1>
+  
+    <!-- In case of false value of propery compiler will remove that element from DOM -->
+    <div *ngIf="show">I live in mumbai
+      <h2>ggg</h2>
+      <p>jdjdjdj</p>
+    </div>
+  
+    <!--In case of undefined value of property it will consider it as a false,
+          hence it should
+        removed from DOM-->
+    <p *ngIf="toShowPara1">poonam</p>
+  
+    <!-- In case of conditions compiler will show element to DOM
+           if condiotion would true else it will remove element from DOM if condition would false -->
+    <p *ngIf="toShowPara === 'poonam'">teststttttt</p>
+  
+    <!-- <h1 *ngIf = "undefinedProperty = true">h111111111111111111</h1> not possible-->
+  
+    <!-- In case of property having NULL value compiler will consider it as a false,hence it should
+     removed from DOM-->
+    <p *ngIf="nullProperty">kkkkkk</p>
+  </div>
+  
+  
+  <div class="div-container" *ngIf="toggel">
+  
+  </div>
+  
+  <br><br>
+  <button (click)="toggelEffect()"> Click </button>
+  {{cars}}
+  
+  <!-- <ul>
+    <li>swift</li>
+    <li>i20</li>
+  </ul> -->
+  
+  <ul *ngFor = "let item of cars">
+     <li class = "itm-container">{{item}}</li>
+  </ul>
+  
+  <table class="table-container">
+    <tr>
+      <th *ngFor="let heading of tableHeadings">{{heading}}</th>
+    </tr>
+    <tr *ngFor = "let tableData of carDetails" >
+      <td>{{tableData.carName}}</td>
+      <td>{{tableData.carPrice}}</td>
+      <td>{{tableData.color}}</td>
+    </tr>
+  </table>
+  
+  <ul *ngFor = " let data of data2">
+   <li>{{data}}</li>
+  </ul>
+  <ul *ngFor = " let data of data3">
+    <li>{{data}}</li>
+  </ul>
+  
+  <div [ngSwitch] = "switchValue">
+  
+    <h2 *ngSwitchCase = "600"> 600 Value </h2>
+    <h2 *ngSwitchCase = "200"> 200 value</h2>
+    <h2 *ngSwitchCase = "100"> 100  value</h2>
+    <h2 *ngSwitchDefault> default h2 </h2>
+  
+  </div>
+  
+  
+  <div class ="container ">
+    I like Pune
+  </div>
+  
+  <div [ngClass]= "color == 'pink' ? 'container1' : 'container'">
+    I like Pune
+  </div>
+  
+  <h2 [class.container] = "test == 200"
+      [class.container1] = "test == 100"
+      [class.container3] = "test == 300" >
+  h22222222222222222222222222
+  </h2>
+  
+  <p style = "color:aqua; font-size: 30px;">paraaaaa</p>
+  <p [ngStyle] = "styleCss == 'yellow' ? {'color' : 'yellow'}: {'color' :'green', 'font-size' : '30px'}"> pararjhbdbkdbckjbd</p>
+  
+  <br><br><br>
