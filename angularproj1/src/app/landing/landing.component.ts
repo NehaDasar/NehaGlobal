@@ -95,7 +95,7 @@ show(){
   
 }
 lifeCycleHooks(){
-  this.router.navigateByUrl('life cycle hooks');
+  this.router.navigateByUrl('lifecyclehooks');
 }
 parent(){
   this.router.navigateByUrl('parent');
@@ -106,6 +106,9 @@ child(){
 apicall(){
   this.router.navigateByUrl('student/apicall')
 }
+form(){
+  this.router.navigateByUrl('form')
+}
 
 getApiCall(){
   console.log('get api calling');
@@ -113,8 +116,9 @@ getApiCall(){
   this.commonApiCallService.getApiCall({endpoint}).subscribe((response: any)=>{
     this.getApiResponse = response;
   })
-  
+
   console.log("this.getApiResponse",this.getApiResponse);
   
 }
+
 }

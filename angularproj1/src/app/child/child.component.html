@@ -1,1 +1,12 @@
+<br><br>
+--------------------------------------
+<button (click)="back()">Back</button>
 <p>child works!</p>
+<h3>testing</h3>
+<button (click)="get()">click</button>
+<p>{{data}}</p>
+Name from Parent : {{dataFromParent}} <br>
+name value from parent :{{parentsDataName}}
+<br>
+<button (click)="sendData()">click</button><br>
+surname: <input type="text" (keyup)="sendData($event)"  >
