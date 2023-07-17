@@ -15,11 +15,68 @@
 <mat-checkbox>Checkbox</mat-checkbox>
 <br><br><br>
 ---------------
-<form [formGroup]="matForm">
+<!-- <form [formGroup]="matForm">
     <mat-form-field class="name-field">
         <mat-label>Name</mat-label>
         <input matInput formControlName="name">
         <mat-hint class="hint">Please enter name here</mat-hint>
         <mat-error *ngIf="matForm.get('name')?.errors?.['required']">Name is required</mat-error>
 </mat-form-field>
+</form> -->
+<form [formGroup]="matForm">
+    <mat-form-field class="name-field">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName">
+        <mat-hint class="hint" *ngIf="!matForm.get('firstName')?.touched">Please Enter First Name here</mat-hint>
+        <mat-error *ngIf="matForm.get('firstName')?.hasError('required')">
+            First Name is required
+        </mat-error>
+        <mat-error *ngIf="matForm.get('firstName')?.errors?.['pattern']">
+            pattern not matched
+        </mat-error>
+        <mat-error *ngIf="!matForm.get('firstName')?.errors?.['pattern'] && matForm.get('firstName')?.errors?.['minlength']">
+          minimum 2 charachters required
+        </mat-error>
+    </mat-form-field> &nbsp;
+
+    <mat-form-field>
+        <mat-label>Middle Name</mat-label>
+        <input matInput  formControlName="middleName">
+        <mat-hint class="hint">Please Enter Middle Name here</mat-hint>
+        <mat-error *ngIf="matForm.get('middleName')?.errors?.['required']">
+            Middle Name is required
+        </mat-error>
+    </mat-form-field> &nbsp;
+
+    <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput  formControlName="lastName">
+        <mat-hint class="hint">Please Enter Last Name here</mat-hint>
+        <mat-error *ngIf="matForm.get('lastName')?.errors?.['required']">
+            Last Name is required
+        </mat-error>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="password" (keyup)="passValidation()"> 
+        <mat-icon matSuffix (click)="visibilePassword()" *ngIf="!showPassword"> visibility </mat-icon>
+        <mat-icon matSuffix (click)="visibilePassword()" *ngIf="showPassword">visibility_off</mat-icon>
+        <mat-hint> Please enter password</mat-hint>
+        <mat-error *ngIf=" matForm.get('password')?.touched && matForm.get('password')?.errors?.['required']"> password is required</mat-error>
+        <mat-error *ngIf="passwordMatch ">pass not matched</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput [type]="showConfirmPassword ? 'text' : 'password'" formControlName="confirmPassword" (keyup)="confPassValidation()"> 
+        <mat-icon matSuffix (click)="visibileConfirmPassword()" *ngIf="!showConfirmPassword"> visibility </mat-icon>
+        <mat-icon matSuffix (click)="visibileConfirmPassword()" *ngIf="showConfirmPassword">visibility_off</mat-icon>
+        <mat-hint> Please Enter Confirm password</mat-hint>
+        <mat-error *ngIf="ConfirmPasswordMatch"> password and confirm password should match</mat-error>
+    </mat-form-field>
+
 </form>
+
+<br><br><br><br><br><br><br>
+-----------------
