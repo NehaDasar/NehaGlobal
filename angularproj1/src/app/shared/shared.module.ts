@@ -6,9 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
-
-
-
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,7 +19,8 @@ import {MatInputModule} from '@angular/material/input';
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
     
   ],
   exports:[
@@ -31,7 +30,8 @@ import {MatInputModule} from '@angular/material/input';
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }

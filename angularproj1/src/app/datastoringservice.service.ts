@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ export class DatastoringserviceService {
   listOfUsers:any
   studentData: any;
   setData!: string;
+  name= new Subject<string>();
 
   constructor() { }
   whiteSpaceValidator(name:any){

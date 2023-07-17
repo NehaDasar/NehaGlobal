@@ -8,6 +8,7 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { FormComponent } from './form/form.component';
+import { Subject1Component } from './subject1/subject1.component';
 
 const routes: Routes = [
   { path : '', component : LoginComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path : 'parent', component : ParentComponent},
   { path : 'lifecyclehooks', component : LifecyclehooksComponent},
   { path : 'form' , component : FormComponent},
+  { path : 'subject1',component :Subject1Component},
 ];
 
 @NgModule({

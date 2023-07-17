@@ -120,5 +120,8 @@ getApiCall(){
   console.log("this.getApiResponse",this.getApiResponse);
   
 }
+subject(){
+  this.router.navigateByUrl('subject1')
+}
 
 }

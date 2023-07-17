@@ -12,6 +12,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
 import { FormComponent } from './form/form.component';
+import { Subject1Component } from './subject1/subject1.component';
+import { Subject2Component } from './subject2/subject2.component';
+import { Subject3Component } from './subject3/subject3.component';
 
 //import { HttpClientModule } from '@angular/common/http';
 
@@ -30,6 +33,9 @@ console.log('app.module.ts file');
     ParentComponent,
     ChildComponent,
     FormComponent,
+    Subject1Component,
+    Subject2Component,
+    Subject3Component,
     
   ],
   imports: [
