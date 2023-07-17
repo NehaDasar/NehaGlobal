@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonApiCallService } from '../student/common-api-call.service';
 
 @Component({
@@ -9,13 +9,15 @@ import { CommonApiCallService } from '../student/common-api-call.service';
 })
 export class FormComponent {
 form! : FormGroup;
+matForm! : FormGroup;
 
 constructor(private fb : FormBuilder,
   private commonApiCallService : CommonApiCallService){}
 
 ngOnInit(){
   console.log('.........');
-  this.myForm()
+  this.myForm();
+  this.matFormDetails();
 }
 myForm(){
   this.form=this.fb.group({
@@ -36,6 +38,11 @@ save(){
   })
 
 
+}
+matFormDetails(){
+  this.matForm = this.fb.group({
+    name : ['',[Validators.required]]
+  })
 }
 
 }
